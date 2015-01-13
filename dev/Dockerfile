@@ -1,8 +1,15 @@
 FROM ubuntu:latest
 MAINTAINER rubicks
 
-RUN apt-get -qq update
-RUN apt-get -qq dist-upgrade
-RUN apt-get -qq install make autoconf automake libtool git
-RUN apt-get -qq install libz-dev zlib1g-dev
+RUN apt-get -qq update       && \
+    apt-get -qq dist-upgrade && \
+    apt-get -qq install \
+        autoconf        \
+        automake        \
+        git             \
+        libtool         \
+        libz-dev        \
+        make            \
+        zlib1g-dev
+
 CMD /bin/bash
