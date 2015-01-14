@@ -9,6 +9,7 @@ RUN apt-get -y update       && \
         autoconf         \
         autoconf-archive \
         automake         \
+        g++              \
         git              \
         libtool          \
         libz-dev         \
