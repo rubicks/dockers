@@ -11,7 +11,6 @@ RUN apt-get -qq update       && \
         git             \
         libtool         \
         libz-dev        \
-        make            \
-        zlib1g-dev
+        make
 
 CMD /bin/bash
