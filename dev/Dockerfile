@@ -3,9 +3,9 @@
 FROM ubuntu:latest
 MAINTAINER rubicks
 
-RUN apt-get -qq update       && \
-    apt-get -qq dist-upgrade && \
-    apt-get -qq install  \
+RUN apt-get -y update       && \
+    apt-get -y dist-upgrade && \
+    apt-get -y install   \
         autoconf         \
         autoconf-archive \
         automake         \
