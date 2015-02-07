@@ -13,6 +13,7 @@ RUN apt-get -y update       && \
         git              \
         libtool          \
         libz-dev         \
-        make
+        make             \
+        man
 
 CMD /bin/bash
