@@ -21,6 +21,8 @@ RUN sudo apt-get -y update       && \
          libxinerama-dev            \
          libxrender-dev             \
          libz-dev                   \
-         mesa-common-dev
+         mesa-common-dev            \
+         xutils-dev
+
 
 CMD /bin/bash
