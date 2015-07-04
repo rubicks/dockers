@@ -1,25 +1,15 @@
-# dockers/infobright/Dockerfile
+# github.com/rubicks/dockers/infobright/Dockerfile
 
 FROM centos:6.6
 
 MAINTAINER rubicks
 
-ADD \
-  https://www.infobright.org/downloads/ice/infobright-4.0.7-0-x86_64-ice.rpm \
-  infobright-4.0.7-0-x86_64-ice.rpm
-
 RUN \
   yum -y update && \
   yum -y upgrade && \
-  yum -y install sudo && \
+  yum -y install wget sudo openssh-clients && \
   >>/etc/sudoers echo "Defaults !requiretty" && \
+  wget -nv -O infobright-4.0.7-0-x86_64-ice.rpm \
+    http://www.infobright.org/downloads/ice/infobright-4.0.7-0-x86_64-ice.rpm && \
   yum -y localinstall infobright-4.0.7-0-x86_64-ice.rpm
 
-# run \
-#   yum -y update && \
-#   yum -y upgrade
-
-# /usr/local/infobright/postconfig.sh
-# copy provision.sh provision.sh
-# run /bin/bash provision.sh
-# cmd /bin/bash
