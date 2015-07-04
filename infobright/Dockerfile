@@ -1,16 +1,16 @@
 # dockers/infobright/Dockerfile
 
-from centos:6.6
+FROM centos:6.6
 
-maintainer rubicks
+MAINTAINER rubicks
 
-add \
+ADD \
   https://www.infobright.org/downloads/ice/infobright-4.0.7-0-x86_64-ice.rpm \
   infobright-4.0.7-0-x86_64-ice.rpm
 
-run \
-  yum -y update && \
-  yum -y upgrade
+# run \
+#   yum -y update && \
+#   yum -y upgrade
 
 # /usr/local/infobright/postconfig.sh
 # copy provision.sh provision.sh
