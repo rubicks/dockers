@@ -8,6 +8,11 @@ ADD \
   https://www.infobright.org/downloads/ice/infobright-4.0.7-0-x86_64-ice.rpm \
   infobright-4.0.7-0-x86_64-ice.rpm
 
+RUN \
+  yum -y update && \
+  yum -y upgrade && \
+  yum -y localinstall infobright-4.0.7-0-x86_64-ice.rpm
+
 # run \
 #   yum -y update && \
 #   yum -y upgrade
